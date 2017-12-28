@@ -1,0 +1,21 @@
+# EditorConfig helps developers define & maintain consistent
+# coding styles between different editors & IDEs (editorconfig.org)
+
+
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# Go to editorconfig.org to download the plugin for your editor.
+
+root = true
+
+#All file extensions (base rules).
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false

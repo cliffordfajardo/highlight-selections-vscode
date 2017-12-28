@@ -1,0 +1,85 @@
+{
+    "name": "hightlight-selections-vscode",
+    "displayName": "hightlight-selections-vscode",
+    "description": "Select or double click a word to highlight it in your editor.",
+    "version": "0.0.1",
+    "publisher": "cliffordfajardo",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "code highlighter",
+        "highlight",
+        "highlight occurences",
+        "highlight selection",
+        "highlight selected",
+        "multi-root ready"
+    ],
+    "galleryBanner": {
+        "color": "#232323",
+        "theme": "dark"
+    },
+    "icon": "images/highlight-selections-logo.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cliffordfajardo/highlight-selections-vscode"
+    },
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "configuration": {
+            "properties": {
+                "highlightSelections.borderColor": {
+                    "type": [
+                        "string"
+                    ],
+                    "default": "#65EAB9",
+                    "description": "Change the border color. (Ex: 'red', '#FFF' #FFFFFFF, 'RGB(255,255,255)','RGB(255, 255, 255. 0.5) )"
+                },
+                "highlightSelections.borderWidth": {
+                    "type": [
+                        "string"
+                    ],
+                    "default": "1px"
+                },
+                "highlightSelections.borderStyle": {
+                    "type": [
+                        "string"
+                    ],
+                    "enum": [
+                        "solid",
+                        "dashed",
+                        "inset",
+                        "double",
+                        "groove",
+                        "outset",
+                        "ridge"
+                    ],
+                    "default": "solid"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "escape-string-regexp": "^1.0.5",
+        "lodash.debounce": "^4.0.8"
+    }
+}
